@@ -1,5 +1,11 @@
 # Transcriptome-based prognostic signature for lung squamous cell carcinoma
 
+## Study overview
+
+The workflow and main analytical results are summarized below.
+
+![Final analysis panel](figures/final_figure_panel.png)
+
 ## Overview
 
 This repository contains the analysis pipeline and results for the study:
