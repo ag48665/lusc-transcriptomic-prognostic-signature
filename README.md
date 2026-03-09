@@ -6,6 +6,24 @@ The workflow and main analytical results are summarized below.
 
 ![Final analysis panel](figures/final_figure_panel.png)
 
+## Key results
+
+### Model performance
+
+![Kaplan Meier](figures/cox_prefilter_kaplan_meier.png)
+
+### Multivariable Cox regression
+
+![Cox forest](figures/multivariable_cox_forest_plot.png)
+
+### Calibration
+
+![Calibration](figures/calibration_plot.png)
+
+### Decision curve analysis
+
+![DCA](figures/dca_plot.png)
+
 ## Overview
 
 This repository contains the analysis pipeline and results for the study:
