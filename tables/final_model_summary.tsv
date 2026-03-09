@@ -1,0 +1,17 @@
+metric	value
+n_total	450
+n_train	315
+n_test	135
+n_selected_features	3
+cindex_train	0.656199472385329
+cindex_test	0.578144536134033
+HR_train	2.23368326320652
+HR_test	1.44812052580284
+pvalue_train	4.49442182250094e-06
+pvalue_test	0.17420655372387
+AUC_train_1year	0.692748666243821
+AUC_train_3year	0.684611090873935
+AUC_train_5year	0.702758843364505
+AUC_test_1year	0.629457954579045
+AUC_test_3year	0.514818796551969
+AUC_test_5year	0.488994056486932

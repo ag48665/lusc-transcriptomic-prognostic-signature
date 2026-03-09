@@ -1,0 +1,2 @@
+model	n_patients	HR_high_vs_low	CI95_low	CI95_high	p_value	cindex
+Cox_prefilter_model	469	2.42821744136595	1.81056669966394	3.25657151633696	3.14003720019818e-09	0.648231447537898

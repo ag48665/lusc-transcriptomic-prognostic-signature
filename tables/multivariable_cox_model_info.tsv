@@ -1,0 +1,3 @@
+model	n_samples	concordance
+Univariate_risk	503	0.637288190142092
+Multivariable	503	0.677437523132131

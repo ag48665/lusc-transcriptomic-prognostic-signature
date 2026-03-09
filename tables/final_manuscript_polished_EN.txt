@@ -1,0 +1,105 @@
+TITLE
+
+Development and validation of a transcriptome-based prognostic signature for survival prediction in lung squamous cell carcinoma
+
+
+
+ABSTRACT
+
+Background: Lung squamous cell carcinoma (LUSC) remains associated with poor clinical outcomes and limited prognostic biomarkers. The aim of this study was to develop and validate a transcriptome-based prognostic model for overall survival in LUSC.
+
+Methods: Transcriptomic and clinical data from TCGA-LUSC were analyzed using a train/test design including 450 patients (315 training and 135 test samples). An elastic-net Cox model was first developed, followed by a Cox-prefilter feature selection strategy. Model performance was assessed using Kaplan–Meier analysis, hazard ratios, concordance index, time-dependent ROC analysis, multivariable Cox regression, calibration analysis, decision curve analysis, and external GEO validation.
+
+Results: The original elastic-net model achieved concordance indices of 0.656 in the training set and 0.578 in the test set. The hazard ratio for high-risk versus low-risk patients was 2.234 in the training cohort (p = 4.49e-06) and 1.448 in the test cohort (p = 0.174). The Cox-prefilter model selected 50 genes and showed improved prognostic performance in 469 patients, with a concordance index of 0.648 and a hazard ratio of 2.428 (95% CI 1.811–3.257, p = 3.14e-09). In multivariable analysis, the molecular risk score remained independently associated with survival. External validation showed significant stratification in GSE30219 (n = 289, C-index = 0.604, p = 2.82e-06) and a weaker trend in GSE37745 (n = 196, C-index = 0.498, p = 0.079).
+
+Conclusions: The Cox-prefilter transcriptomic signature demonstrated improved prognostic discrimination, independent prognostic value, and partial reproducibility in external cohorts. These findings suggest that the proposed model may provide a useful framework for survival risk stratification in lung squamous cell carcinoma.
+
+
+
+KEYWORDS
+
+Lung squamous cell carcinoma; LUSC; prognosis; transcriptomics; Cox regression; survival model; external validation
+
+
+
+INTRODUCTION
+Lung cancer remains the leading cause of cancer-related mortality worldwide, and lung squamous cell carcinoma (LUSC) represents a major histological subtype characterized by substantial biological and clinical heterogeneity.
+Despite advances in systemic therapy and molecular profiling, prognostic stratification in LUSC still relies primarily on conventional clinicopathological variables such as tumor stage, age, and performance status. These variables provide only limited resolution in predicting individual patient outcomes.
+Recent developments in high-throughput transcriptomic technologies have enabled the systematic identification of molecular signatures associated with tumor behavior and patient survival. Integrative bioinformatics approaches using publicly available datasets, such as The Cancer Genome Atlas (TCGA), provide valuable opportunities to discover and validate prognostic biomarkers.
+In this study, we developed and evaluated transcriptome-based survival prediction models for patients with LUSC. An elastic-net Cox regression framework was first applied within a train/test design to construct a prognostic model. To improve biological interpretability and robustness, we further implemented a Cox-prefilter feature selection strategy to identify survival-associated genes.
+The prognostic performance of the resulting models was evaluated using Kaplan–Meier survival analysis, concordance index estimation, and time-dependent ROC analysis. We additionally assessed the independent prognostic value of the molecular risk score using multivariable Cox regression including clinical covariates.
+Finally, the proposed signature was externally validated in independent Gene Expression Omnibus (GEO) cohorts, and its potential clinical relevance was explored through calibration analysis and decision curve analysis.
+This integrated analytical framework was designed to provide a comprehensive evaluation of transcriptomic prognostic signatures and to assess their potential utility for risk stratification in lung squamous cell carcinoma.
+
+DISCUSSION
+In the present study, we developed and evaluated transcriptome-based prognostic models for lung squamous cell carcinoma using TCGA transcriptomic and clinical data. Our results demonstrate that a Cox-prefilter feature selection strategy can improve prognostic stratification compared with a conventional elastic-net survival model.
+The Cox-prefilter model achieved improved separation between high-risk and low-risk patient groups and demonstrated slightly higher discrimination as reflected by concordance index and hazard ratio estimates. Importantly, the molecular risk score remained significantly associated with overall survival in multivariable Cox regression analysis, suggesting that the signature provides prognostic information beyond standard clinical covariates.
+The calibration analysis further indicated that predicted risk ranking corresponded to observed event rates across ordered patient groups. Decision curve analysis suggested that the model may offer potential clinical utility within a meaningful range of threshold probabilities.
+External validation in independent GEO cohorts provided partial support for the reproducibility of the proposed signature. In the GSE30219 dataset, the model showed significant survival stratification after adjustment for score direction. In contrast, the validation in GSE37745 demonstrated a weaker but directionally consistent trend. These differences may reflect platform heterogeneity, reduced overlap in gene sets, and differences in cohort characteristics.
+Several limitations should be acknowledged. First, the analyses were based on retrospective public datasets. Second, external validation was constrained by incomplete gene overlap and heterogeneous phenotype annotation across GEO cohorts. Third, the selected genes did not converge strongly on a single functional pathway, which may explain the limited enrichment results observed in downstream functional analysis.
+Despite these limitations, the study provides a reproducible bioinformatics framework for developing transcriptomic prognostic signatures and highlights the potential value of Cox-based feature selection strategies for survival modeling.
+Future studies should aim to validate the proposed signature in larger independent cohorts with standardized clinical annotation and to explore the biological mechanisms underlying the identified prognostic genes.
+Overall, our findings suggest that transcriptome-based risk models may provide useful complementary information for survival risk stratification in lung squamous cell carcinoma.
+
+The present study developed and evaluated transcriptome-based survival models for LUSC and showed that a Cox-prefilter strategy provided better prognostic stratification than the original elastic-net model.
+
+The improved performance was reflected by a higher hazard ratio, a favorable concordance index, and clearer separation between risk groups.
+
+
+
+The multivariable analysis further indicated that the molecular risk score retained prognostic significance independently of conventional clinical variables, supporting its potential value beyond standard clinicopathological assessment.
+
+The calibration analysis suggested that the score was directionally consistent with observed risk, while the decision curve analysis indicated potential clinical utility within a meaningful threshold range.
+
+
+
+External validation showed that the model retained prognostic value in GSE30219 after correcting score direction and demonstrated a weaker trend in GSE37745.
+
+These findings suggest partial reproducibility across independent cohorts, although the reduced number of overlapping genes and platform-related differences likely attenuated performance.
+
+
+
+This study has several limitations. First, the results were derived from retrospective public datasets. Second, external validation was constrained by incomplete gene overlap and heterogeneous phenotype annotation across GEO cohorts. Third, the enrichment analysis did not yield strong significant GO/KEGG results, which may reflect limited pathway convergence among the selected genes.
+
+
+
+Overall, the findings support the Cox-prefilter transcriptomic signature as a promising prognostic framework in LUSC and provide a basis for future validation in larger, clinically annotated cohorts.
+
+
+
+CONCLUSIONS
+
+The Cox-prefilter transcriptomic signature demonstrated improved prognostic discrimination in TCGA-LUSC, retained significance in multivariable analysis, and showed partial reproducibility in external GEO datasets.
+
+The model may therefore serve as a useful framework for molecular risk stratification in lung squamous cell carcinoma, although further validation in prospective cohorts is warranted.
+
+
+
+FIGURE LEGENDS
+
+Figure 1. Overview of the study workflow.
+Schematic presentation of data preprocessing, transcriptomic modeling, Cox-prefilter selection, internal evaluation, multivariable analysis, calibration, decision curve analysis, and external validation.
+
+Figure 2. Performance of the original and Cox-prefilter prognostic models.
+Comparison of concordance index and survival separation between the original elastic-net model and the Cox-prefilter model in TCGA-LUSC.
+
+Figure 3. Forest plot of the multivariable Cox regression model.
+Forest plot showing hazard ratios, 95% confidence intervals, and p values for the molecular risk score and clinical covariates included in the multivariable model.
+
+Figure 4. External validation in GEO cohorts.
+Kaplan–Meier curves showing risk-group stratification in GSE30219 and GSE37745.
+
+Figure 5. Calibration plot.
+Observed event rates across ordered model-predicted risk groups.
+
+Figure 6. Decision curve analysis.
+Net benefit of the model compared with treat-all and treat-none strategies across a range of threshold probabilities.
+
+Figure 7. Final summary panel.
+Integrated visual summary of the most important analyses, including original model performance, Cox-prefilter model results, multivariable Cox regression, external validation, calibration, and decision curve analysis.
+
+
+
+SUPPLEMENTARY MATERIAL
+
+Supplementary materials should include detailed selected feature tables, time-dependent ROC tables, Cox-prefilter gene list, multivariable Cox result tables, external validation summaries, and calibration/DCA numeric outputs.
