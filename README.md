@@ -10,8 +10,6 @@ The workflow and main analytical results are summarized below.
 
 ### Model performance
 
-![Kaplan Meier](figures/cox_prefilter_kaplan_meier.png)
-
 ### Multivariable Cox regression
 
 ![Cox forest](figures/multivariable_cox_forest_plot.png)
